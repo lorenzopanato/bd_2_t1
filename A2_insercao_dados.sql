@@ -22,20 +22,20 @@ INSERT INTO CATEGORIA (id_categoria, nome) VALUES (3, 'Roupas');
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (1, '3999.99', 'Iphone 13', 1);
-INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (2, '7299.99', 'Notebook', 1);
-INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (3, '199.99', 'Fone de Ouvido', 1);
-INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (4, '239.99', 'Carregador', 1);
+INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (1, 3999.99, 'Iphone 13', 1);
+INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (2, 7299.99, 'Ntebook', 1);
+INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (3, 19.99,'Fone de Ouvido', 1);
+INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (4, 239.99, 'Carregador', 1);
 
-INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (5, '39.99', 'A revolução dos bichos', 2);
-INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (6, '99.99', 'Hábitos Atômicos', 2);
-INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (7, '59.99', 'Pai Rico, Pai Pobre', 2);
-INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (8, '29.99', 'Diário de um Banana', 2);
+INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (5, 39.99, 'A revolução dos bichos', 2);
+INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (6, 99.99, 'Hábitos Atômicos', 2);
+INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (7, 59.99, 'Pai Rico, Pai Pobre', 2);
+INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (8, 29.99, 'Diário de um Banana', 2);
 
-INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (9, '79.99', 'Camiseta', 3);
-INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (10, '239.99', 'Calça de sarja', 3);
-INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (11, '59.99', 'Boné', 3);
-INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (12, '299.99', 'Casaco', 3);
+INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (9, 79.99, 'Camiseta', 3);
+INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (10, 239.99, 'Calça de sarja', 3);
+INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (11, 59.99, 'Boné', 3);
+INSERT INTO PRODUTO (id_produto, preco, nome, id_categoria) VALUES (12, 299.99, 'Casaco', 3);
 
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -62,7 +62,7 @@ INSERT INTO ITEM (id_item, quantidade, data_entrega, status, id_produto, id_pedi
 -- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 INSERT INTO AVALIACAO (id_avaliacao, nota, comentario, id_produto, id_cliente) VALUES (1, 5, 'Excelente produto!', 1, 1);
-INSERT INTO AVALIACAO (id_avaliacao, nota, comentario, id_produto, id_cliente) VALUES (2, 4, 'Bom custo-benefício', 1, 2);
-INSERT INTO AVALIACAO (id_avaliacao, nota, comentario, id_produto, id_cliente) VALUES (3, 3, 'Produto mediano', 2, 3);
+INSERT INTO AVALIACAO (id_avaliacao, nota, comentario, id_produto, id_cliente) VALUES (2, 4.2, 'Bom custo-benefício', 1, 2);
+INSERT INTO AVALIACAO (id_avaliacao, nota, comentario, id_produto, id_cliente) VALUES (3, 3.2, 'Produto mediano', 2, 3);
 INSERT INTO AVALIACAO (id_avaliacao, nota, comentario, id_produto, id_cliente) VALUES (4, 5, 'Excelente livro!', 5, 4);
-INSERT INTO AVALiACAO (id_avaliacao, nota, comentario, id_produto, id_cliente) VALUES (5, 4, 'Gostei muito', 9, 5);
+INSERT INTO AVALiACAO (id_avaliacao, nota, comentario, id_produto, id_cliente) VALUES (5, 4.8, 'Gostei muito', 9, 5);
