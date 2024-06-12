@@ -4,6 +4,8 @@ CREATE TABLE CATEGORIA (
     CONSTRAINT PK_CATEGORIA PRIMARY KEY (id_categoria)
 );
 
+-- --------------------------------------------------------------------------------------------------------------------------
+
 CREATE TABLE CLIENTE (
     id_cliente INT NOT NULL,
     nome VARCHAR(100) NOT NULL,
@@ -11,6 +13,8 @@ CREATE TABLE CLIENTE (
     email VARCHAR(50) NOT NULL,
     CONSTRAINT PK_CLIENTE PRIMARY KEY (id_cliente)
 );
+
+-- --------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE ENDERECO (
     id_endereco INT NOT NULL,
@@ -21,6 +25,8 @@ CREATE TABLE ENDERECO (
     CONSTRAINT PK_ENDERECO PRIMARY KEY (id_endereco),
     CONSTRAINT FK_ENDERECO_CLIENTE FOREIGN KEY (id_cliente) REFERENCES CLIENTE (id_cliente)
 );
+
+-- --------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE PEDIDO (
     id_pedido INT NOT NULL,
@@ -33,14 +39,18 @@ CREATE TABLE PEDIDO (
     CONSTRAINT FK_PEDIDO_CLIENTE FOREIGN KEY (id_cliente) REFERENCES CLIENTE (id_cliente)
 );
 
+-- --------------------------------------------------------------------------------------------------------------------------
+
 CREATE TABLE PRODUTO (
     id_produto INT NOT NULL,
-    preco VARCHAR(50) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
     nome VARCHAR(50) NOT NULL,
     id_categoria INT,
     CONSTRAINT PK_PRODUTO PRIMARY KEY (id_produto),
     CONSTRAINT FK_PRODUTO_CATEGORIA FOREIGN KEY (id_categoria) REFERENCES CATEGORIA (id_categoria)
 );
+
+-- --------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE TRANSPORTADORA (
     id_transportadora INT NOT NULL,
@@ -48,6 +58,8 @@ CREATE TABLE TRANSPORTADORA (
     email VARCHAR(50) NOT NULL,
     CONSTRAINT PK_TRANSPORTADORA PRIMARY KEY (id_transportadora)
 );
+
+-- --------------------------------------------------------------------------------------------------------------------------
 
 CREATE TABLE ITEM (
     id_item INT NOT NULL,
@@ -63,9 +75,11 @@ CREATE TABLE ITEM (
     CONSTRAINT FK_ITEM_TRANSPORTADORA FOREIGN KEY (id_transportadora) REFERENCES TRANSPORTADORA (id_transportadora)
 );
 
+-- --------------------------------------------------------------------------------------------------------------------------
+
 CREATE TABLE AVALIACAO (
     id_avaliacao INT NOT NULL,
-    nota INT NOT NULL,
+    nota DECIMAL(2, 1) NOT NULL,
     comentario VARCHAR(255),
     id_produto INT NOT NULL,
     id_cliente INT NOT NULL,
@@ -73,3 +87,4 @@ CREATE TABLE AVALIACAO (
     CONSTRAINT FK_AVALIACAO_PRODUTO FOREIGN KEY (id_produto) REFERENCES PRODUTO (id_produto),
     CONSTRAINT FK_AVALIACAO_CLIENTE FOREIGN KEY (id_cliente) REFERENCES CLIENTE (id_cliente)
 );
+
