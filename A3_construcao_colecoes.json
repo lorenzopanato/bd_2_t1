@@ -1,0 +1,315 @@
+{
+  "colecoes": {
+    "clientes": [
+      {
+        "_id": 1,
+        "nome": "João da Silva",
+        "cpf": "05244195200",
+        "email": "joaosilva@gmail.com",
+        "enderecos": [
+          {
+            "id_endereco": 1,
+            "cep": "23142-648",
+            "numero": 122,
+            "complemento": "Apto 1204"
+          },
+          {
+            "id_endereco": 2,
+            "cep": "12215-648",
+            "numero": 467,
+            "complemento": ""
+          }
+        ]
+      },
+      {
+        "_id": 2,
+        "nome": "Maria Oliveira",
+        "cpf": "24762294121",
+        "email": "mariaoliveira@gmail.com",
+        "enderecos": [
+          {
+            "id_endereco": 3,
+            "cep": "20216-942",
+            "numero": 874,
+            "complemento": ""
+          }
+        ]
+      },
+      {
+        "_id": 3,
+        "nome": "Carlos Souza",
+        "cpf": "12354398730",
+        "email": "carlossouza@hotmail.com",
+        "enderecos": [
+          {
+            "id_endereco": 4,
+            "cep": "91360-810",
+            "numero": 900,
+            "complemento": ""
+          }
+        ]
+      },
+      {
+        "_id": 4,
+        "nome": "Ana Pereira",
+        "cpf": "87232188512",
+        "email": "anapereira@gmail.com",
+        "enderecos": [
+          {
+            "id_endereco": 5,
+            "cep": "45278-912",
+            "numero": 656,
+            "complemento": "Apto 901"
+          }
+        ]
+      },
+      {
+        "_id": 5,
+        "nome": "Marcela Lima",
+        "cpf": "04123485522",
+        "email": "marcela.lima@gmail.com",
+        "enderecos": [
+          {
+            "id_endereco": 6,
+            "cep": "72389-422",
+            "numero": 754,
+            "complemento": ""
+          },
+          {
+            "id_endereco": 7,
+            "cep": "67561-553",
+            "numero": 324,
+            "complemento": "Apto 203"
+          }
+        ]
+      }
+    ],
+    
+    "categorias": [
+      {
+        "_id": 1,
+        "nome": "Eletrônicos"
+      },
+      {
+        "_id": 2,
+        "nome": "Livros"
+      },
+      {
+        "_id": 3,
+        "nome": "Moda"
+      }
+    ],
+    
+    "produtos": [
+      {
+        "_id": 1,
+        "preco": 3999.99,
+        "nome": "Iphone 13",
+        "id_categoria": 1,
+        "avaliacoes": [
+          {
+            "id_avaliacao": 1,
+            "nota": 5,
+            "comentario": "Excelente produto!",
+            "id_cliente": 1
+          },
+          {
+            "id_avaliacao": 2,
+            "nota": 4.2,
+            "comentario": "Bom custo-benefício",
+            "id_cliente": 2
+          }
+        ]
+      },
+      {
+        "_id": 2,
+        "preco": 7299.99,
+        "nome": "Notebook",
+        "id_categoria": 1,
+        "avaliacoes": [
+          {
+            "id_avaliacao": 3,
+            "nota": 3.2,
+            "comentario": "Produto mediano",
+            "id_cliente": 3
+          }
+        ]
+      },
+      {
+        "_id": 3,
+        "preco": 19.99,
+        "nome": "Fone de Ouvido",
+        "id_categoria": 1,
+        "avaliacoes": []
+      },
+      {
+        "_id": 4,
+        "preco": 239.99,
+        "nome": "Carregador",
+        "id_categoria": 1,
+        "avaliacoes": []
+      },
+      {
+        "_id": 5,
+        "preco": 39.99,
+        "nome": "A revolução dos bichos",
+        "id_categoria": 2,
+        "avaliacoes": [
+          {
+            "id_avaliacao": 4,
+            "nota": 5,
+            "comentario": "Excelente livro!",
+            "id_cliente": 4
+          }
+        ]
+      },
+      {
+        "_id": 6,
+        "preco": 99.99,
+        "nome": "Hábitos Atômicos",
+        "id_categoria": 2,
+        "avaliacoes": []
+      },
+      {
+        "_id": 7,
+        "preco": 59.99,
+        "nome": "Pai Rico, Pai Pobre",
+        "id_categoria": 2,
+        "avaliacoes": []
+      },
+      {
+        "_id": 8,
+        "preco": 29.99,
+        "nome": "Diário de um Banana",
+        "id_categoria": 2,
+        "avaliacoes": []
+      },
+      {
+        "_id": 9,
+        "preco": 79.99,
+        "nome": "Camiseta",
+        "id_categoria": 3,
+        "avaliacoes": [
+          {
+            "id_avaliacao": 5,
+            "nota": 4.8,
+            "comentario": "Gostei muito",
+            "id_cliente": 5
+          }
+        ]
+      },
+      {
+        "_id": 10,
+        "preco": 239.99,
+        "nome": "Calça de sarja",
+        "id_categoria": 3,
+        "avaliacoes": []
+      },
+      {
+        "_id": 11,
+        "preco": 59.99,
+        "nome": "Boné",
+        "id_categoria": 3,
+        "avaliacoes": []
+      },
+      {
+        "_id": 12,
+        "preco": 299.99,
+        "nome": "Casaco",
+        "id_categoria": 3,
+        "avaliacoes": []
+      }
+    ],
+    
+    "pedidos": [
+      {
+        "_id": 1,
+        "data_hora": "2024-01-01T10:00:00Z",
+        "forma_pgto": "Cartão de Crédito",
+        "id_endereco": 1,
+        "id_cliente": 1,
+        "itens": [
+          {
+            "id_item": 1,
+            "quantidade": 1,
+            "data_entrega": "2024-01-05T00:00:00Z",
+            "status": "Entregue",
+            "id_produto": 1,
+            "id_transportadora": 1
+          },
+          {
+            "id_item": 2,
+            "quantidade": 2,
+            "data_entrega": "2024-01-06T00:00:00Z",
+            "status": "Em Trânsito",
+            "id_produto": 2,
+            "id_transportadora": 1
+          }
+        ]
+      },    
+      {
+        "_id": 2,
+        "data_hora": "2024-01-02T11:00:00Z",
+        "forma_pgto": "Boleto",
+        "id_endereco": 3,
+        "id_cliente": 2,
+        "itens": [
+          {
+            "id_item": 3,
+            "quantidade": 1,
+            "data_entrega": "2024-01-07T00:00:00Z",
+            "status": "Entregue",
+            "id_produto": 5,
+            "id_transportadora": 2
+          },
+          {
+            "id_item": 4,
+            "quantidade": 3,
+            "data_entrega": "2024-01-08T00:00:00Z",
+            "status": "Entregue",
+            "id_produto": 6,
+            "id_transportadora": 2
+          }
+        ]
+      },
+      {
+        "_id": 3,
+        "data_hora": "2024-01-03T12:00:00Z",
+        "forma_pgto": "Cartão de Débito",
+        "id_endereco": 5,
+        "id_cliente": 4,
+        "itens": [
+          {
+            "id_item": 5,
+            "quantidade": 1,
+            "data_entrega": "2024-01-09T00:00:00Z",
+            "status": "Em Trânsito",
+            "id_produto": 9,
+            "id_transportadora": 1
+          },
+          {
+            "id_item": 6,
+            "quantidade": 2,
+            "data_entrega": "2024-01-10T00:00:00Z",
+            "status": "Entregue",
+            "id_produto": 10,
+            "id_transportadora": 1
+          }
+        ]
+      }
+    ],
+    
+    "transportadoras": [
+      {
+        "_id": 1,
+        "nome": "Transporte Rápido",
+        "email": "contato@transporterapido.com"
+      },
+      {
+        "_id": 2,
+        "nome": "Entrega Segura",
+        "email": "suporte@entregasegura.com"
+      }
+    ]
+  }
+}
