@@ -1,0 +1,235 @@
+{
+  "validacoes": {
+    "clientes": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "_id",
+          "nome",
+          "cpf",
+          "email"
+        ],
+        "properties": {
+          "_id": {
+            "bsonType": "int",
+            "description": "deve ser um inteiro e é obrigatório"
+          },
+          "nome": {
+            "bsonType": "string",
+            "description": "deve ser uma string e é obrigatório"
+          },
+          "cpf": {
+            "bsonType": "string",
+            "description": "deve ser uma string e é obrigatório"
+          },
+          "email": {
+            "bsonType": "string",
+            "description": "deve ser uma string e é obrigatório"
+          },
+          "enderecos": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "required": [
+                "cep",
+                "numero"
+              ],
+              "properties": {
+                "cep": {
+                  "bsonType": "string"
+                },
+                "numero": {
+                  "bsonType": "int"
+                },
+                "complemento": {
+                  "bsonType": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    
+    "categorias": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "_id",
+          "nome"
+        ],
+        "properties": {
+          "_id": {
+            "bsonType": "int",
+            "description": "deve ser um inteiro e é obrigatório"
+          },
+          "nome": {
+            "bsonType": "string",
+            "description": "deve ser uma string e é obrigatório"
+          }
+        }
+      }
+    },
+    
+    "produtos": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "_id",
+          "preco",
+          "nome",
+          "id_categoria"
+        ],
+        "properties": {
+          "_id": {
+            "bsonType": "int",
+            "description": "deve ser um inteiro e é obrigatório"
+          },
+          "preco": {
+            "bsonType": "double",
+            "description": "deve ser um número e é obrigatório"
+          },
+          "nome": {
+            "bsonType": "string",
+            "description": "deve ser uma string e é obrigatório"
+          },
+          "id_categoria": {
+            "bsonType": "int",
+            "description": "deve ser um inteiro e é obrigatório"
+          },
+          "avaliacoes": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "required": [
+                "id_avaliacao",
+                "nota",
+                "id_cliente"
+              ],
+              "properties": {
+                "id_avaliacao": {
+                  "bsonType": "int",
+                  "description": "deve ser um inteiro e é obrigatório"
+                },
+                "nota": {
+                  "bsonType": "double",
+                  "description": "deve ser um número e é obrigatório"
+                },
+                "comentario": {
+                  "bsonType": "string",
+                  "description": "deve ser uma string"
+                },
+                "id_cliente": {
+                  "bsonType": "int",
+                  "description": "deve ser um inteiro e é obrigatório"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    
+    "pedidos": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "_id",
+          "data_hora",
+          "forma_pgto",
+          "id_endereco",
+          "id_cliente",
+          "itens"
+        ],
+        "properties": {
+          "_id": {
+            "bsonType": "int",
+            "description": "deve ser um inteiro e é obrigatório"
+          },
+          "data_hora": {
+            "bsonType": "string",
+            "description": "deve ser uma data e hora e é obrigatório"
+          },
+          "forma_pgto": {
+            "bsonType": "string",
+            "description": "deve ser uma string e é obrigatório"
+          },
+          "id_endereco": {
+            "bsonType": "int",
+            "description": "deve ser um inteiro e é obrigatório"
+          },
+          "id_cliente": {
+            "bsonType": "int",
+            "description": "deve ser um inteiro e é obrigatório"
+          },
+          "itens": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "required": [
+                "id_item",
+                "quantidade",
+                "data_entrega",
+                "status",
+                "id_produto",
+                "id_transportadora"
+              ],
+              "properties": {
+                "id_item": {
+                  "bsonType": "int",
+                  "description": "deve ser um inteiro e é obrigatório"
+                },
+                "quantidade": {
+                  "bsonType": "int",
+                  "description": "deve ser um inteiro e é obrigatório"
+                },
+                "data_entrega": {
+                  "bsonType": "string",
+                  "description": "deve ser uma data e é obrigatório"
+                },
+                "status": {
+                  "bsonType": "string",
+                  "description": "deve ser uma string e é obrigatório"
+                },
+                "id_produto": {
+                  "bsonType": "int",
+                  "description": "deve ser um inteiro e é obrigatório"
+                },
+                "id_transportadora": {
+                  "bsonType": "int",
+                  "description": "deve ser um inteiro e é obrigatório"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    
+    "transportadoras": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "_id",
+          "nome",
+          "email"
+        ],
+        "properties": {
+          "_id": {
+            "bsonType": "int",
+            "description": "deve ser um inteiro e é obrigatório"
+          },
+          "nome": {
+            "bsonType": "string",
+            "description": "deve ser uma string e é obrigatório"
+          },
+          "email": {
+            "bsonType": "string",
+            "description": "deve ser uma string e é obrigatório"
+          }
+        }
+      }
+    }
+  }
+}
+
